@@ -1,0 +1,41 @@
+Script folder     = D:\Ozgur_PURE\Halenur_Papers_and_Codes
+Figures folder    = D:\Ozgur_PURE\Halenur_Papers_and_Codes\Figures
+Results folder    = D:\Ozgur_PURE\Halenur_Papers_and_Codes\Results
+Data folder       = D:\Ozgur_PURE\Halenur_Papers_and_Codes\Data
+
+===============================================
+Shared parameters
+===============================================
+Distance    = 15.0 m | Beam angle = 30 mrad | sigma_s = 0.4501 m
+w_mo SF     = 0.2158 m | w_mo SL    = 0.0721 m
+rho values  = [0 0.9 0.99] | h_th = 0.10 | N = 10000
+
+=== TASK 2: i.i.d. reference case ===
+Mean(x_k)=-0.00173  Mean(r_k)=0.56568  Mean(h_k)SF=0.05507  Mean(h_k)SL=0.00599
+
+=== TASK 3: Correlated (AR(1)) cases, rho = [0 0.9 0.99] ===
+rho=0.00: measured lag-1 autocorr=-0.0091 | Mean(h_k)SF=0.05061 | Mean(h_k)SL=0.00494
+rho=0.90: measured lag-1 autocorr=0.8950 | Mean(h_k)SF=0.05511 | Mean(h_k)SL=0.00649
+rho=0.99: measured lag-1 autocorr=0.9903 | Mean(h_k)SF=0.04918 | Mean(h_k)SL=0.00557
+
+=== TASK 4: Statistical comparison table (h_th = 0.10) ===
+    Regime           Case            w_mo_m      AvgH          MinH       PctFramesBelowThresh    AvgConsecRunLen    MaxConsecRunLen
+    ______    ___________________    ______    _________    __________    ____________________    _______________    _______________
+
+    {'SF'}    {'i.i.d. (Task 2)'}    0.2158     0.055073    2.5917e-67           87.47                8.0618                58      
+    {'SF'}    {'AR(1), rho=0.00'}    0.2158     0.050613    9.7752e-69           88.05                8.3698                63      
+    {'SF'}    {'AR(1), rho=0.90'}    0.2158     0.055114    7.0597e-71           87.55                12.296               113      
+    {'SF'}    {'AR(1), rho=0.99'}    0.2158     0.049178    8.3381e-58           88.23                 33.42               646      
+    {'SL'}    {'i.i.d. (Task 2)'}    0.0721    0.0059945             0           98.54                68.431               344      
+    {'SL'}    {'AR(1), rho=0.00'}    0.0721    0.0049399             0           98.76                79.645               407      
+    {'SL'}    {'AR(1), rho=0.90'}    0.0721    0.0064869             0           98.52                72.978               498      
+    {'SL'}    {'AR(1), rho=0.99'}    0.0721     0.005571             0           98.79                145.28              1982      
+
+
+
+All figures saved to  D:\Ozgur_PURE\Halenur_Papers_and_Codes\Figures
+All tables saved to   D:\Ozgur_PURE\Halenur_Papers_and_Codes\Results
+All data saved to     D:\Ozgur_PURE\Halenur_Papers_and_Codes\Data\Combined_Task2to4_data.mat
+
+============ TASKS 2-4 COMPLETE ============
+>> 

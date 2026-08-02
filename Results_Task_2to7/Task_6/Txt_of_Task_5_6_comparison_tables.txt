@@ -1,0 +1,58 @@
+===============================================
+Task 5-6 setup
+===============================================
+distance=15.0 m | theta_bm=30 mrad | sigma_s=0.4501 m
+Ptx = 20.0 dBm | N_frames = 500 | h_th = 0.10
+
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 4 workers.
+Using parallel pool with 4 workers
+
+========== SF CONFIG (w_0=200 mm, a_T=1.50 m) ==========
+  eta=7.49  ->  w_mo = 0.2158 m
+  [SF,OFDM,Aligned       ] Pd=0.930  avgRangeErr=0.0050 m  avgVelErr=0.2910 m/s  avgFailRun=1.03  maxFailRun=2
+  [SF,OFDM,i.i.d.        ] Pd=0.228  avgRangeErr=4.7213 m  avgVelErr=110.9654 m/s  avgFailRun=4.34  maxFailRun=22
+  [SF,OFDM,AR(1) rho=0.90] Pd=0.234  avgRangeErr=4.6934 m  avgVelErr=105.7793 m/s  avgFailRun=6.49  maxFailRun=30
+  [SF,OFDM,AR(1) rho=0.99] Pd=0.252  avgRangeErr=4.7912 m  avgVelErr=98.6870 m/s  avgFailRun=7.19  maxFailRun=77
+  [SF,SCFDMA,Aligned       ] Pd=0.898  avgRangeErr=0.0052 m  avgVelErr=0.2910 m/s  avgFailRun=1.21  maxFailRun=3
+  [SF,SCFDMA,i.i.d.        ] Pd=0.228  avgRangeErr=5.1248 m  avgVelErr=105.3591 m/s  avgFailRun=4.60  maxFailRun=27
+  [SF,SCFDMA,AR(1) rho=0.90] Pd=0.262  avgRangeErr=4.5938 m  avgVelErr=107.3086 m/s  avgFailRun=5.59  maxFailRun=38
+  [SF,SCFDMA,AR(1) rho=0.99] Pd=0.240  avgRangeErr=4.5363 m  avgVelErr=98.5861 m/s  avgFailRun=7.04  maxFailRun=75
+
+========== SL CONFIG (w_0=200 mm, a_T=0.04 m) ==========
+  eta=0.20  ->  w_mo = 0.1166 m
+  [SL,OFDM,Aligned       ] Pd=0.936  avgRangeErr=0.0050 m  avgVelErr=0.2910 m/s  avgFailRun=1.10  maxFailRun=2
+  [SL,OFDM,i.i.d.        ] Pd=0.090  avgRangeErr=6.5563 m  avgVelErr=150.3106 m/s  avgFailRun=11.67  maxFailRun=48
+  [SL,OFDM,AR(1) rho=0.90] Pd=0.050  avgRangeErr=6.8450 m  avgVelErr=154.5387 m/s  avgFailRun=26.39  maxFailRun=76
+  [SL,OFDM,AR(1) rho=0.99] Pd=0.054  avgRangeErr=6.8769 m  avgVelErr=160.6439 m/s  avgFailRun=31.53  maxFailRun=227
+  [SL,SCFDMA,Aligned       ] Pd=0.902  avgRangeErr=0.0052 m  avgVelErr=0.2910 m/s  avgFailRun=1.09  maxFailRun=2
+  [SL,SCFDMA,i.i.d.        ] Pd=0.088  avgRangeErr=6.3168 m  avgVelErr=147.1808 m/s  avgFailRun=11.12  maxFailRun=39
+  [SL,SCFDMA,AR(1) rho=0.90] Pd=0.054  avgRangeErr=6.8326 m  avgVelErr=167.2122 m/s  avgFailRun=23.65  maxFailRun=73
+  [SL,SCFDMA,AR(1) rho=0.99] Pd=0.068  avgRangeErr=6.7964 m  avgVelErr=159.8847 m/s  avgFailRun=31.07  maxFailRun=225
+
+    Regime     Waveform          Scenario         AvgRangeErr_m    AvgVelErr_mps     Pd      AvgConsecFailRun    MaxConsecFailRun
+    ______    __________    __________________    _____________    _____________    _____    ________________    ________________
+
+    {'SF'}    {'OFDM'  }    {'Aligned'       }       0.005016         0.29099        0.93         1.0294                 2       
+    {'SF'}    {'OFDM'  }    {'i.i.d.'        }         4.7213          110.97       0.228         4.3371                22       
+    {'SF'}    {'OFDM'  }    {'AR(1) rho=0.90'}         4.6934          105.78       0.234         6.4915                30       
+    {'SF'}    {'OFDM'  }    {'AR(1) rho=0.99'}         4.7912          98.687       0.252         7.1923                77       
+    {'SF'}    {'SCFDMA'}    {'Aligned'       }      0.0052005         0.29099       0.898         1.2143                 3       
+    {'SF'}    {'SCFDMA'}    {'i.i.d.'        }         5.1248          105.36       0.228         4.5952                27       
+    {'SF'}    {'SCFDMA'}    {'AR(1) rho=0.90'}         4.5938          107.31       0.262         5.5909                38       
+    {'SF'}    {'SCFDMA'}    {'AR(1) rho=0.99'}         4.5363          98.586        0.24          7.037                75       
+    {'SL'}    {'OFDM'  }    {'Aligned'       }      0.0049815         0.29099       0.936         1.1034                 2       
+    {'SL'}    {'OFDM'  }    {'i.i.d.'        }         6.5563          150.31        0.09         11.667                48       
+    {'SL'}    {'OFDM'  }    {'AR(1) rho=0.90'}          6.845          154.54        0.05         26.389                76       
+    {'SL'}    {'OFDM'  }    {'AR(1) rho=0.99'}         6.8769          160.64       0.054         31.533               227       
+    {'SL'}    {'SCFDMA'}    {'Aligned'       }      0.0051775         0.29099       0.902         1.0889                 2       
+    {'SL'}    {'SCFDMA'}    {'i.i.d.'        }         6.3168          147.18       0.088         11.122                39       
+    {'SL'}    {'SCFDMA'}    {'AR(1) rho=0.90'}         6.8326          167.21       0.054          23.65                73       
+    {'SL'}    {'SCFDMA'}    {'AR(1) rho=0.99'}         6.7964          159.88       0.068         31.067               225       
+
+
+Figures -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Figures_T56
+Table   -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Results_T56
+Data    -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Data_T56
+============ TASKS 5-6 COMPLETE ============
+>> 
