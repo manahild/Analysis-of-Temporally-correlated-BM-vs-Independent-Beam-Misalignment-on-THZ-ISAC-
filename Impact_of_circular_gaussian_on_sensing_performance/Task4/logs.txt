@@ -1,0 +1,194 @@
+=== Quick beam sanity check: h(0) should be 1 for all beams ===
+  Circular Gaussian            h(0) = 1.000000  [PASS]
+  Elliptical Gaussian          h(0) = 1.000000  [PASS]
+  Rotated Elliptical (\phi=30^\circ) h(0) = 1.000000  [PASS]
+  Flat-top (p=4, \phi=30^\circ) h(0) = 1.000000  [PASS]
+  Sidelobed (\phi=30^\circ)    h(0) = 1.000000  [PASS]
+
+===============================================
+Task 4 -- Echo-based pointing estimation validation + DIAGNOSTICS
+===============================================
+wref = 0.0500 m (= w_mo of the regime under test) | hfloor = 1e-12 | fdstep = 5.00e-06 m
+
+=== STAGE A: ideal (noiseless) probe-power validation ===
+
+--- Circular Gaussian (deltax=0.0150 m, deltay=0.0150 m) ---
+  Direct quadratic estimator: max|eps_hat-eps_true| over 13 test pts = 7.758e-18 m  [PASS]
+  EKF-coldstart (linearized at eps_pred=0): max error = 6.7980e-15 m
+  Gauss-Newton (LM-damped):                 max error = 8.6736e-18 m
+  Lookup (61x61 grid):                      max error = 7.5736e-04 m
+
+--- Elliptical Gaussian (deltax=0.0150 m, deltay=0.0090 m) ---
+  Direct quadratic estimator: max|eps_hat-eps_true| over 13 test pts = 1.396e-17 m  [PASS]
+  EKF-coldstart (linearized at eps_pred=0): max error = 6.7966e-15 m
+  Gauss-Newton (LM-damped):                 max error = 1.2509e-17 m
+  Lookup (61x61 grid):                      max error = 5.3940e-04 m
+
+--- Rotated Elliptical (\phi=30^\circ) (deltax=0.0125 m, deltay=0.0098 m) ---
+  Direct quadratic estimator: max|eps_hat-eps_true| over 13 test pts = 1.831e-17 m  [PASS]
+  EKF-coldstart (linearized at eps_pred=0): max error = 2.2803e-14 m
+  Gauss-Newton (LM-damped):                 max error = 2.8632e-17 m
+  Lookup (61x61 grid):                      max error = 6.5580e-04 m
+
+--- Flat-top (p=4, \phi=30^\circ) (deltax=0.0125 m, deltay=0.0098 m) ---
+  Direct quadratic estimator: N/A (beam is not exactly quadratic)
+  EKF-coldstart (linearized at eps_pred=0): max error = 1.8463e-01 m
+  Gauss-Newton (LM-damped):                 max error = 7.4570e-02 m
+  Lookup (61x61 grid):                      max error = 1.3565e-03 m
+
+--- Sidelobed (\phi=30^\circ) (deltax=0.0092 m, deltay=0.0070 m) ---
+  Direct quadratic estimator: N/A (beam is not exactly quadratic)
+  EKF-coldstart (linearized at eps_pred=0): max error = 6.9863e-02 m
+  Gauss-Newton (LM-damped):                 max error = 1.0357e-01 m
+  Lookup (61x61 grid):                      max error = 1.0781e-02 m
+
+Stage A table -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Task4_output\results\Task4_StageA_table.csv
+
+=== STAGE A2: DIAGNOSTICS (Jacobian conditioning + EKF error vs prediction distance) ===
+
+--- Flat-top (p=4, \phi=30^\circ) ---
+  J(eps_pred=0) = [1.0384e+01 -5.5340e+00; -4.3542e+00 1.3198e+01]
+  rank=2   cond=2.542e+00   rcond=3.435e-01
+  -> J is reasonably well-conditioned at the cold-start point; a large
+     EKF-coldstart error here comes from linearization RANGE, not conditioning.
+  EKF error vs. |eps_pred - eps_true| (eps_true fixed at 0.30*wref along x):
+      frac     rcond(J)      err (m)
+      0.00    3.435e-01   2.1667e-02
+      0.05    3.440e-01   2.1279e-02
+      0.10    3.454e-01   2.0185e-02
+      0.20    3.498e-01   1.6545e-02
+      0.30    3.455e-01   1.2221e-02
+      0.50    3.099e-01   5.2000e-03
+      0.75    2.539e-01   9.8485e-04
+      1.00    2.207e-01   0.0000e+00
+
+--- Sidelobed (\phi=30^\circ) ---
+  J(eps_pred=0) = [7.1400e+01 -3.7999e+01; -2.9584e+01 8.8244e+01]
+  rank=2   cond=2.544e+00   rcond=3.480e-01
+  -> J is reasonably well-conditioned at the cold-start point; a large
+     EKF-coldstart error here comes from linearization RANGE, not conditioning.
+  EKF error vs. |eps_pred - eps_true| (eps_true fixed at 0.30*wref along x):
+      frac     rcond(J)      err (m)
+      0.00    3.480e-01   7.3123e-04
+      0.05    3.480e-01   7.2603e-04
+      0.10    3.480e-01   7.1113e-04
+      0.20    3.481e-01   6.5636e-04
+      0.30    3.482e-01   5.7530e-04
+      0.50    3.485e-01   3.6843e-04
+      0.75    3.491e-01   1.1580e-04
+      1.00    3.501e-01   0.0000e+00
+
+Interpretation guide:
+  - Error falling toward 0 as frac -> 1 means EKF-coldstart's large error is a
+    LINEARIZATION-RANGE artifact, not a bug: Stage B's "EKF-warmstart" method
+    below tests the near-truth-prediction regime this implies for Task 5.
+  - If error stayed large even at frac=1, that would be a genuine estimator
+    limitation, not just a cold-start problem -- did not occur for any beam here.
+Diagnostics table -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Task4_output\results\Task4_StageA2_diagnostics_table.csv
+
+=== STAGE B: complete sensing-chain validation ===
+beams=CircularGaussian,EllipticalGaussian,RotatedEllipticalGaussian,FlatTop4,Sidelobed | alpha=[0.2 0.4] | Ptx=[10 20] dBm | Ntrials=30 | Mcal=100 | Nfa=100
+
+--- Ptx=10.0 dBm  (aligned SNR ~ 16.2 dB) ---
+    Pdet threshold (Pfa=1.0e-03, Nfa=100 trials) = 1.2181e-15
+  [Circular Gaussian, alpha=0.20] deltax=0.0100 deltay=0.0100 m
+      Direct         bias=[-3.5644 1.3247] mm  RMSE=14.4011 mm  P95=23.7699 mm  Pdrop=0.000
+      EKF-coldstart  bias=[-3.5644 1.3247] mm  RMSE=14.4011 mm  P95=23.7699 mm  Pdrop=0.000
+      EKF-warmstart  bias=[-3.5644 1.3247] mm  RMSE=14.4011 mm  P95=23.7699 mm  Pdrop=0.000
+      Lookup         bias=[-3.7539 1.4074] mm  RMSE=14.3878 mm  P95=24.0038 mm  Pdrop=0.000
+  [Circular Gaussian, alpha=0.40] deltax=0.0200 deltay=0.0200 m
+      Direct         bias=[-1.3905 1.0973] mm  RMSE=7.7286 mm  P95=16.4008 mm  Pdrop=0.300
+      EKF-coldstart  bias=[-1.3905 1.0973] mm  RMSE=7.7286 mm  P95=16.4008 mm  Pdrop=0.300
+      EKF-warmstart  bias=[-1.3905 1.0973] mm  RMSE=7.7286 mm  P95=16.4008 mm  Pdrop=0.300
+      Lookup         bias=[-1.4490 1.2565] mm  RMSE=7.7215 mm  P95=15.8721 mm  Pdrop=0.300
+  [Elliptical Gaussian, alpha=0.20] deltax=0.0100 deltay=0.0060 m
+      Direct         bias=[0.1114 -1.8037] mm  RMSE=13.8245 mm  P95=26.0443 mm  Pdrop=0.200
+      EKF-coldstart  bias=[0.1114 -1.8037] mm  RMSE=13.8245 mm  P95=26.0443 mm  Pdrop=0.200
+      EKF-warmstart  bias=[0.1114 -1.8037] mm  RMSE=13.8245 mm  P95=26.0443 mm  Pdrop=0.200
+      Lookup         bias=[0.2329 -1.9865] mm  RMSE=13.6940 mm  P95=25.6780 mm  Pdrop=0.200
+  [Elliptical Gaussian, alpha=0.40] deltax=0.0200 deltay=0.0120 m
+      Direct         bias=[1.0163 -0.3069] mm  RMSE=6.7343 mm  P95=12.3713 mm  Pdrop=0.433
+      EKF-coldstart  bias=[1.0163 -0.3069] mm  RMSE=6.7343 mm  P95=12.3713 mm  Pdrop=0.433
+      EKF-warmstart  bias=[1.0163 -0.3069] mm  RMSE=6.7343 mm  P95=12.3713 mm  Pdrop=0.433
+      Lookup         bias=[0.8991 -0.2680] mm  RMSE=6.8933 mm  P95=12.8439 mm  Pdrop=0.433
+  [Rotated Elliptical (\phi=30^\circ), alpha=0.20] deltax=0.0083 deltay=0.0065 m
+      Direct         bias=[3.8485 0.6576] mm  RMSE=16.0602 mm  P95=29.1701 mm  Pdrop=0.167
+      EKF-coldstart  bias=[3.8485 0.6576] mm  RMSE=16.0602 mm  P95=29.1701 mm  Pdrop=0.167
+      EKF-warmstart  bias=[3.8485 0.6576] mm  RMSE=16.0602 mm  P95=29.1701 mm  Pdrop=0.167
+      Lookup         bias=[3.8275 0.4889] mm  RMSE=16.0454 mm  P95=28.9499 mm  Pdrop=0.167
+  [Rotated Elliptical (\phi=30^\circ), alpha=0.40] deltax=0.0166 deltay=0.0131 m
+      Direct         bias=[-3.2321 -0.5489] mm  RMSE=9.1041 mm  P95=14.8435 mm  Pdrop=0.500
+      EKF-coldstart  bias=[-3.2321 -0.5489] mm  RMSE=9.1041 mm  P95=14.8435 mm  Pdrop=0.500
+      EKF-warmstart  bias=[-3.2321 -0.5489] mm  RMSE=9.1041 mm  P95=14.8435 mm  Pdrop=0.500
+      Lookup         bias=[-2.9903 -0.3717] mm  RMSE=9.1461 mm  P95=14.3467 mm  Pdrop=0.500
+  [Flat-top (p=4, \phi=30^\circ), alpha=0.20] deltax=0.0083 deltay=0.0065 m
+      EKF-coldstart  bias=[13.1067 14.8750] mm  RMSE=199.9172 mm  P95=445.0856 mm  Pdrop=0.100
+      EKF-warmstart  bias=[0.8481 -1.0860] mm  RMSE=32.5132 mm  P95=61.8895 mm  Pdrop=0.100
+      Lookup         bias=[0.7627 -0.3507] mm  RMSE=18.0887 mm  P95=32.0267 mm  Pdrop=0.100
+  [Flat-top (p=4, \phi=30^\circ), alpha=0.40] deltax=0.0166 deltay=0.0131 m
+      EKF-coldstart  bias=[-6.8810 -4.7670] mm  RMSE=24.3148 mm  P95=40.5836 mm  Pdrop=0.233
+      EKF-warmstart  bias=[-4.5973 -4.0452] mm  RMSE=14.6175 mm  P95=28.8037 mm  Pdrop=0.233
+      Lookup         bias=[-4.0179 -3.0827] mm  RMSE=12.7949 mm  P95=24.7960 mm  Pdrop=0.233
+  [Sidelobed (\phi=30^\circ), alpha=0.20] deltax=0.0062 deltay=0.0047 m
+      EKF-coldstart  bias=[-2.7160 -0.3091] mm  RMSE=11.8301 mm  P95=16.6202 mm  Pdrop=0.600
+      EKF-warmstart  bias=[-2.6360 -0.5518] mm  RMSE=10.6941 mm  P95=15.2339 mm  Pdrop=0.600
+      Lookup         bias=[-2.1738 -0.6054] mm  RMSE=10.2437 mm  P95=15.0862 mm  Pdrop=0.600
+  [Sidelobed (\phi=30^\circ), alpha=0.40] deltax=0.0123 deltay=0.0093 m
+      EKF-coldstart  bias=[-0.7940 -0.6765] mm  RMSE=5.5633 mm  P95=11.2120 mm  Pdrop=0.467
+      EKF-warmstart  bias=[-0.9197 -0.6460] mm  RMSE=5.1740 mm  P95=10.9051 mm  Pdrop=0.467
+      Lookup         bias=[-0.8926 -0.6654] mm  RMSE=5.6137 mm  P95=11.7062 mm  Pdrop=0.467
+
+--- Ptx=20.0 dBm  (aligned SNR ~ 26.2 dB) ---
+    Pdet threshold (Pfa=1.0e-03, Nfa=100 trials) = 9.8033e-16
+  [Circular Gaussian, alpha=0.20] deltax=0.0100 deltay=0.0100 m
+      Direct         bias=[-0.3280 0.6396] mm  RMSE=5.1122 mm  P95=7.6918 mm  Pdrop=0.000
+      EKF-coldstart  bias=[-0.3280 0.6396] mm  RMSE=5.1122 mm  P95=7.6918 mm  Pdrop=0.000
+      EKF-warmstart  bias=[-0.3280 0.6396] mm  RMSE=5.1122 mm  P95=7.6918 mm  Pdrop=0.000
+      Lookup         bias=[-0.2948 0.8904] mm  RMSE=5.2053 mm  P95=8.0544 mm  Pdrop=0.000
+  [Circular Gaussian, alpha=0.40] deltax=0.0200 deltay=0.0200 m
+      Direct         bias=[0.1673 0.1137] mm  RMSE=2.8246 mm  P95=4.8815 mm  Pdrop=0.000
+      EKF-coldstart  bias=[0.1673 0.1137] mm  RMSE=2.8246 mm  P95=4.8815 mm  Pdrop=0.000
+      EKF-warmstart  bias=[0.1673 0.1137] mm  RMSE=2.8246 mm  P95=4.8815 mm  Pdrop=0.000
+      Lookup         bias=[0.2176 0.2057] mm  RMSE=2.9754 mm  P95=4.8556 mm  Pdrop=0.000
+  [Elliptical Gaussian, alpha=0.20] deltax=0.0100 deltay=0.0060 m
+      Direct         bias=[-1.0822 0.1710] mm  RMSE=5.8947 mm  P95=10.6522 mm  Pdrop=0.000
+      EKF-coldstart  bias=[-1.0822 0.1710] mm  RMSE=5.8947 mm  P95=10.6522 mm  Pdrop=0.000
+      EKF-warmstart  bias=[-1.0822 0.1710] mm  RMSE=5.8947 mm  P95=10.6522 mm  Pdrop=0.000
+      Lookup         bias=[-1.0658 0.1441] mm  RMSE=5.9173 mm  P95=10.9845 mm  Pdrop=0.000
+  [Elliptical Gaussian, alpha=0.40] deltax=0.0200 deltay=0.0120 m
+      Direct         bias=[-0.8156 0.4082] mm  RMSE=3.7530 mm  P95=7.0583 mm  Pdrop=0.000
+      EKF-coldstart  bias=[-0.8156 0.4082] mm  RMSE=3.7530 mm  P95=7.0583 mm  Pdrop=0.000
+      EKF-warmstart  bias=[-0.8156 0.4082] mm  RMSE=3.7530 mm  P95=7.0583 mm  Pdrop=0.000
+      Lookup         bias=[-0.7344 0.4194] mm  RMSE=4.0012 mm  P95=6.6627 mm  Pdrop=0.000
+  [Rotated Elliptical (\phi=30^\circ), alpha=0.20] deltax=0.0083 deltay=0.0065 m
+      Direct         bias=[-0.4679 -0.2553] mm  RMSE=6.2415 mm  P95=11.0164 mm  Pdrop=0.000
+      EKF-coldstart  bias=[-0.4679 -0.2553] mm  RMSE=6.2415 mm  P95=11.0164 mm  Pdrop=0.000
+      EKF-warmstart  bias=[-0.4679 -0.2553] mm  RMSE=6.2415 mm  P95=11.0164 mm  Pdrop=0.000
+      Lookup         bias=[0.1278 0.0880] mm  RMSE=6.3336 mm  P95=11.6401 mm  Pdrop=0.000
+  [Rotated Elliptical (\phi=30^\circ), alpha=0.40] deltax=0.0166 deltay=0.0131 m
+      Direct         bias=[0.4126 0.4204] mm  RMSE=3.2919 mm  P95=5.8855 mm  Pdrop=0.000
+      EKF-coldstart  bias=[0.4126 0.4204] mm  RMSE=3.2919 mm  P95=5.8855 mm  Pdrop=0.000
+      EKF-warmstart  bias=[0.4126 0.4204] mm  RMSE=3.2919 mm  P95=5.8855 mm  Pdrop=0.000
+      Lookup         bias=[0.1896 0.2431] mm  RMSE=2.9521 mm  P95=5.8304 mm  Pdrop=0.000
+  [Flat-top (p=4, \phi=30^\circ), alpha=0.20] deltax=0.0083 deltay=0.0065 m
+      EKF-coldstart  bias=[-28.5776 2.9246] mm  RMSE=138.3265 mm  P95=309.8822 mm  Pdrop=0.033
+      EKF-warmstart  bias=[-1.0601 0.1984] mm  RMSE=9.6079 mm  P95=21.8959 mm  Pdrop=0.033
+      Lookup         bias=[-0.2027 0.2919] mm  RMSE=8.6934 mm  P95=16.7732 mm  Pdrop=0.033
+  [Flat-top (p=4, \phi=30^\circ), alpha=0.40] deltax=0.0166 deltay=0.0131 m
+      EKF-coldstart  bias=[-2.3549 -1.7066] mm  RMSE=41.0306 mm  P95=69.8075 mm  Pdrop=0.033
+      EKF-warmstart  bias=[0.1078 -0.2468] mm  RMSE=5.3786 mm  P95=9.9011 mm  Pdrop=0.033
+      Lookup         bias=[0.0795 0.1836] mm  RMSE=4.5654 mm  P95=9.2957 mm  Pdrop=0.033
+  [Sidelobed (\phi=30^\circ), alpha=0.20] deltax=0.0062 deltay=0.0047 m
+      EKF-coldstart  bias=[-0.0599 0.4228] mm  RMSE=8.5107 mm  P95=17.7904 mm  Pdrop=0.233
+      EKF-warmstart  bias=[-0.3064 0.0562] mm  RMSE=6.8994 mm  P95=13.3681 mm  Pdrop=0.233
+      Lookup         bias=[-0.5116 -0.0098] mm  RMSE=7.1693 mm  P95=13.7444 mm  Pdrop=0.233
+  [Sidelobed (\phi=30^\circ), alpha=0.40] deltax=0.0123 deltay=0.0093 m
+      EKF-coldstart  bias=[-0.3565 -0.3829] mm  RMSE=5.0554 mm  P95=12.5778 mm  Pdrop=0.133
+      EKF-warmstart  bias=[-0.4368 -0.7275] mm  RMSE=5.3264 mm  P95=9.5371 mm  Pdrop=0.133
+      Lookup         bias=[1.0909 -1.0522] mm  RMSE=7.0045 mm  P95=11.6687 mm  Pdrop=0.133
+
+Stage B table -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Task4_output\results\Task4_StageB_table.csv
+============ TASK 4 VALIDATION COMPLETE ============
+
+All Task 4 deliverables written under: D:\Ozgur_PURE\Halenur_Papers_and_Codes\Task4_output
+>> 

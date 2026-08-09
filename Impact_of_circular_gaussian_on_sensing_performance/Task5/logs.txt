@@ -1,0 +1,62 @@
+===============================================
+Task 5 -- Closed-loop tracking and compensation (STANDALONE TEST, FIXED v2)
+===============================================
+wref=0.2000 m | true beam = Rotated Elliptical Gaussian (\phi=30^\circ) | rho=0.99 | sigma_s/wref=0.25 | alpha=0.30 | J=1 | K=60
+
+Probe geometry: wx_dir=0.1664 m, wy_dir=0.1309 m, deltax=0.0499 m, deltay=0.0393 m
+Task 3 fitted A (hfit_min=0.25): [72.2222 -38.4900; -38.4900 116.6667]  (eig-clipping applied: NO)
+True analytic A:                 [72.2222 -38.4900; -38.4900 116.6667]
+
+Aligned SNR ~ -13.8 dB | Pdet threshold (Pfa=1.0e-03) = 2.8216e-11
+
+--- Calibrating measurement covariance (Monte Carlo, eps_cal=0, Mcal=200) ---
+Rquad    = [3.011e-04 7.280e-06; 7.280e-06 5.255e-04]
+Rlookup  = [2.795e-06 2.199e-06; 2.199e-06 2.079e-06]
+
+=== STAGE A: ideal (noiseless) closed-loop sanity check (20 frames) ===
+
+  MatchedQuadraticKF     final-frame |s_true - s_upd| = 1.8100e-08 m  (K_ideal=20)
+  MismatchedCircularKF   final-frame |s_true - s_upd| = 5.4300e+03 m  (K_ideal=20)
+  FittedMatrixKF         final-frame |s_true - s_upd| = 1.8100e-08 m  (K_ideal=20)
+  FullMapEKF             final-frame |s_true - s_upd| = 1.8100e-08 m  (K_ideal=20)
+  LookupPlusKF           final-frame |s_true - s_upd| = 4.2008e-03 m  (K_ideal=20)
+  (Matched/Fitted/EKF/Lookup should shrink toward ~0; Mismatched circular will
+   generally NOT reach 0 even noiselessly -- and, with a near-singular Rtiny, can
+   genuinely diverge -- since its assumed A is structurally wrong for a
+   non-circular beam. This is the expected, informative failure mode.)
+
+=== STAGE B: full sensing-chain closed-loop run (60 frames, 7 methods) ===
+
+--- Running: NoCompensation ---
+--- Running: Oracle ---
+--- Running: MatchedQuadraticKF ---
+--- Running: MismatchedCircularKF ---
+--- Running: FittedMatrixKF ---
+--- Running: FullMapEKF ---
+--- Running: LookupPlusKF ---
+
+[NoCompensation        ] RMSEpred=0.0418 m RMSEres=0.0418 m Pdrop=NaN Pout=0.000 Pcorrect=0.650 avgFail=1.62 maxFail=4
+[Oracle                ] RMSEpred=0.0000 m RMSEres=0.0000 m Pdrop=NaN Pout=0.000 Pcorrect=0.667 avgFail=1.43 maxFail=4
+[MatchedQuadraticKF    ] RMSEpred=0.0121 m RMSEres=0.0020 m Pdrop=0.000 Pout=0.000 Pcorrect=0.667 avgFail=1.43 maxFail=4
+[MismatchedCircularKF  ] RMSEpred=0.2622 m RMSEres=0.2680 m Pdrop=0.917 Pout=0.983 Pcorrect=0.117 avgFail=13.25 maxFail=30
+[FittedMatrixKF        ] RMSEpred=0.0121 m RMSEres=0.0020 m Pdrop=0.000 Pout=0.000 Pcorrect=0.667 avgFail=1.43 maxFail=4
+[FullMapEKF            ] RMSEpred=0.0121 m RMSEres=0.0020 m Pdrop=0.000 Pout=0.000 Pcorrect=0.667 avgFail=1.43 maxFail=4
+[LookupPlusKF          ] RMSEpred=0.0125 m RMSEres=0.0033 m Pdrop=0.000 Pout=0.000 Pcorrect=0.667 avgFail=1.43 maxFail=4
+
+             Method             RMSEpred_m    RMSEres_m     Pdrop      Pout      Pcorrect    CondRMSE_R_m    CondRMSE_v_mps    AvgFailRun    MaxFailRun    P_failrun_ge2    P_failrun_ge5    P_failrun_ge10
+    ________________________    __________    _________    _______    _______    ________    ____________    ______________    __________    __________    _____________    _____________    ______________
+
+    {'NoCompensation'      }     0.041762      0.041762        NaN          0       0.65      0.0046125         0.29099          1.6154           4           0.30769              0                 0     
+    {'Oracle'              }            0             0        NaN          0    0.66667      0.0046125         0.29099          1.4286           4           0.21429              0                 0     
+    {'MatchedQuadraticKF'  }     0.012119     0.0020016          0          0    0.66667      0.0046125         0.29099          1.4286           4           0.21429              0                 0     
+    {'MismatchedCircularKF'}      0.26222       0.26804    0.91667    0.98333    0.11667      0.0046125         0.29099           13.25          30                 1           0.75              0.75     
+    {'FittedMatrixKF'      }     0.012119     0.0020016          0          0    0.66667      0.0046125         0.29099          1.4286           4           0.21429              0                 0     
+    {'FullMapEKF'          }     0.012119     0.0020016          0          0    0.66667      0.0046125         0.29099          1.4286           4           0.21429              0                 0     
+    {'LookupPlusKF'        }     0.012477      0.003339          0          0    0.66667      0.0046125         0.29099          1.4286           4           0.21429              0                 0     
+
+Summary table -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Results_T5\Task5_methods_summary_table.csv
+
+Figures -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Figures_T5
+Tables  -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Results_T5
+============ TASK 5 STANDALONE TEST COMPLETE (FIXED v2) ============
+>> 

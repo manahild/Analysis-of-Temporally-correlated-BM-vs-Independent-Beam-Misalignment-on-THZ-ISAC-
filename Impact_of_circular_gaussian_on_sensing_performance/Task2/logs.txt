@@ -1,0 +1,54 @@
+===============================================
+Task 2 -- General beam library validation
+===============================================
+wref = 0.2000 m | grid = 401 x 401 over [-2wref,2wref]
+
+--- Check 1: h(0) = 1 ---------------------------------
+  Circular Gaussian                             h(0) = 1.000000000000  [PASS]
+  Elliptical Gaussian                           h(0) = 1.000000000000  [PASS]
+  Rotated Elliptical Gaussian (\phi=30^\circ)   h(0) = 1.000000000000  [PASS]
+  Flat-top Super-Gaussian (p=4, \phi=30^\circ)  h(0) = 1.000000000000  [PASS]
+  Sidelobed (sinc^2, \phi=30^\circ)             h(0) = 1.000000000000  [PASS]
+  => Check 1 overall: PASS
+
+--- Check 2: 0 <= h(eps) <= 1 everywhere --------------
+  Circular Gaussian                             min=1.125e-07  max=1.000000  [PASS]
+  Elliptical Gaussian                           min=7.493e-14  max=1.000000  [PASS]
+  Rotated Elliptical Gaussian (\phi=30^\circ)   min=3.354e-19  max=1.000000  [PASS]
+  Flat-top Super-Gaussian (p=4, \phi=30^\circ)  min=0.000e+00  max=1.000000  [PASS]
+  Sidelobed (sinc^2, \phi=30^\circ)             min=4.611e-35  max=1.000000  [PASS]
+  => Check 2 overall: PASS
+
+--- Check 3: p=2 super-Gaussian == elliptical Gaussian -
+  max|H_elliptical - H_supergaussian(p=2)| = 0.000e+00  [PASS]
+
+--- Check 4: matrix form == rotated-coordinate form ---
+  A = [72.222222 -38.490018; -38.490018 116.666667]
+  max|H_rotated-coords - H_matrix| = 3.331e-16  [PASS]
+
+--- Check 5: rotation preserves contour area ----------
+  Area(h>=e^{-2}), phi=0   = 0.075316 m^2
+  Area(h>=e^{-2}), phi=30  = 0.075404 m^2
+  relative area error = 0.1168%  [PASS]  (analytic ellipse area = pi*wx*wy = 0.075398 m^2)
+
+--- Check 6: bilinear interpolation vs analytic map ---
+  coarse map grid spacing = 0.0080 m | query points = 4000
+  RMSE(h_interp - h_true) = 2.859e-04 | max abs err = 2.742e-03  [PASS, bound=0.020]
+
+===============================================
+ALL CHECKS: 1:PASS  2:PASS  3:PASS  4:PASS  5:PASS  6:PASS
+===============================================
+
+--- Task 2 width / symmetry table -----------------------------------------------------
+Beam                                         W3dB_h   W3dB_v  W10dB_h  W10dB_v    Wnull_h    Wnull_v   SymX   SymY
+Circular Gaussian                            0.2351   0.2351   0.4292   0.4292          -          -   PASS   PASS
+Elliptical Gaussian                          0.2351   0.1411   0.4292   0.2575          -          -   PASS   PASS
+Rotated Elliptical Gaussian (\phi=30^\circ)   0.1956   0.1539   0.3571   0.2810          -          -   FAIL   FAIL
+Flat-top Super-Gaussian (p=4, \phi=30^\circ)   0.2551   0.2007   0.3448   0.2713          -          -   FAIL   FAIL
+Sidelobed (sinc^2, \phi=30^\circ)            0.1499   0.1166   0.2622   0.1976     0.3969     0.2671   FAIL   FAIL
+(widths in metres; "-" = no mainlobe null in this cut; SymX: h(-x,y)=h(x,y); SymY: h(x,-y)=h(x,y))
+
+Figures -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Figures_T2
+Table   -> D:\Ozgur_PURE\Halenur_Papers_and_Codes\Results_T2\Task2_width_table.csv
+============ TASK 2 COMPLETE ============
+>> 

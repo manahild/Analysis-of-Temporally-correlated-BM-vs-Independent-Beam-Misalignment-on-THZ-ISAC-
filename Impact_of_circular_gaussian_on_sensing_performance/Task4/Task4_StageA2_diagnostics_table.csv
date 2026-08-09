@@ -1,0 +1,17 @@
+Beam,PredictionFraction,rcondJ,EKFError_m
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",0,0.343541889177371,0.0935289330790703
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",0.05,0.344031678109022,0.0918557450139272
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",0.1,0.34541519462506,0.0871343044477152
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",0.2,0.349846649009736,0.0714220968949204
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",0.3,0.345474636934942,0.0527530127402944
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",0.5,0.309863342719551,0.0224469458123189
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",0.75,0.253857459975501,0.00425131534035784
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",1,0.220666322845318,0
+"Sidelobed (sinc^2, \phi=30^\circ)",0,0.348000119308476,0.0031565092615286
+"Sidelobed (sinc^2, \phi=30^\circ)",0.05,0.348005127992213,0.00313408035716052
+"Sidelobed (sinc^2, \phi=30^\circ)",0.1,0.348020159333892,0.0030697565322268
+"Sidelobed (sinc^2, \phi=30^\circ)",0.2,0.348080363986011,0.00283333962930936
+"Sidelobed (sinc^2, \phi=30^\circ)",0.3,0.348180986296311,0.00248342684665358
+"Sidelobed (sinc^2, \phi=30^\circ)",0.5,0.348505323108075,0.00159039915091484
+"Sidelobed (sinc^2, \phi=30^\circ)",0.75,0.349148912803708,0.000499869050190987
+"Sidelobed (sinc^2, \phi=30^\circ)",1,0.35007150009179,0

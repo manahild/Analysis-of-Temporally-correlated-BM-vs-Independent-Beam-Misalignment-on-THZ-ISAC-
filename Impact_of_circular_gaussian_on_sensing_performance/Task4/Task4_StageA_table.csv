@@ -1,0 +1,261 @@
+Beam,eps_true,Method,eps_hat,Error_m
+"Circular Gaussian",[0 0],Direct,[0 0],0
+"Circular Gaussian",[0 0],EKF-1step,[0 0],0
+"Circular Gaussian",[0 0],GaussNewton,[0 0],0
+"Circular Gaussian",[0 0],Lookup,[0 0],0
+"Circular Gaussian",[0.02158 0],Direct,[0.02158 0],1.04083408558608e-17
+"Circular Gaussian",[0.02158 0],EKF-1step,[0.02158 0],5.88071258356138e-15
+"Circular Gaussian",[0.02158 0],GaussNewton,[0.02158 0],3.46944695195361e-18
+"Circular Gaussian",[0.02158 0],Lookup,[0.01943 0],0.00215836058035577
+"Circular Gaussian",[0.01526 0.01526],Direct,[0.01526 0.01526],3.87895961444886e-18
+"Circular Gaussian",[0.01526 0.01526],EKF-1step,[0.01526 0.01526],5.8645407884128e-15
+"Circular Gaussian",[0.01526 0.01526],GaussNewton,[0.01526 0.01526],2.0888836804026e-17
+"Circular Gaussian",[0.01526 0.01526],Lookup,[0.01295 0.01295],0.00326930897217413
+"Circular Gaussian",[1.322e-18 0.02158],Direct,[0 0.02158],1.04919123497817e-17
+"Circular Gaussian",[1.322e-18 0.02158],EKF-1step,[0 0.02158],5.88071273206935e-15
+"Circular Gaussian",[1.322e-18 0.02158],GaussNewton,[0 0.02158],3.71264427815817e-18
+"Circular Gaussian",[1.322e-18 0.02158],Lookup,[0 0.01943],0.00215836058035577
+"Circular Gaussian",[-0.01526 0.01526],Direct,[-0.01526 0.01526],3.87895961444886e-18
+"Circular Gaussian",[-0.01526 0.01526],EKF-1step,[-0.01526 0.01526],5.8645407884128e-15
+"Circular Gaussian",[-0.01526 0.01526],GaussNewton,[-0.01526 0.01526],2.0888836804026e-17
+"Circular Gaussian",[-0.01526 0.01526],Lookup,[-0.01295 0.01295],0.00326930897217413
+"Circular Gaussian",[0.06475 0],Direct,[0.06475 0],1.38777878078145e-17
+"Circular Gaussian",[0.06475 0],EKF-1step,[0.06475 0],1.76247905159244e-14
+"Circular Gaussian",[0.06475 0],GaussNewton,[0.06475 0],2.77555756156289e-17
+"Circular Gaussian",[0.06475 0],Lookup,[0.06475 0],0
+"Circular Gaussian",[0.04579 0.04579],Direct,[0.04579 0.04579],6.93889390390723e-18
+"Circular Gaussian",[0.04579 0.04579],EKF-1step,[0.04579 0.04579],1.76095689154776e-14
+"Circular Gaussian",[0.04579 0.04579],GaussNewton,[0.04579 0.04579],6.93889390390723e-18
+"Circular Gaussian",[0.04579 0.04579],Lookup,[0.04533 0.04533],0.000650778500830613
+"Circular Gaussian",[3.965e-18 0.06475],Direct,[0 0.06475],1.44330517525646e-17
+"Circular Gaussian",[3.965e-18 0.06475],EKF-1step,[0 0.06475],1.76247909618868e-14
+"Circular Gaussian",[3.965e-18 0.06475],GaussNewton,[0 0.06475],2.80373316527871e-17
+"Circular Gaussian",[3.965e-18 0.06475],Lookup,[0 0.06475],3.96484406420777e-18
+"Circular Gaussian",[-0.04579 0.04579],Direct,[-0.04579 0.04579],6.93889390390723e-18
+"Circular Gaussian",[-0.04579 0.04579],EKF-1step,[-0.04579 0.04579],1.76095689154776e-14
+"Circular Gaussian",[-0.04579 0.04579],GaussNewton,[-0.04579 0.04579],6.93889390390723e-18
+"Circular Gaussian",[-0.04579 0.04579],Lookup,[-0.04533 0.04533],0.000650778500830613
+"Circular Gaussian",[0.1079 0],Direct,[0.1079 0],0
+"Circular Gaussian",[0.1079 0],EKF-1step,[0.1079 0],2.93376434257198e-14
+"Circular Gaussian",[0.1079 0],GaussNewton,[0.1079 0],1.38777878078145e-17
+"Circular Gaussian",[0.1079 0],Lookup,[0.1101 0],0.00215836058035576
+"Circular Gaussian",[0.07631 0.07631],Direct,[0.07631 0.07631],0
+"Circular Gaussian",[0.07631 0.07631],EKF-1step,[0.07631 0.07631],2.9341102821653e-14
+"Circular Gaussian",[0.07631 0.07631],GaussNewton,[0.07631 0.07631],2.77555756156289e-17
+"Circular Gaussian",[0.07631 0.07631],Lookup,[0.0777 0.0777],0.0019677519705129
+"Circular Gaussian",[6.608e-18 0.1079],Direct,[0 0.1079],6.60807344034629e-18
+"Circular Gaussian",[6.608e-18 0.1079],EKF-1step,[0 0.1079],2.9337644169928e-14
+"Circular Gaussian",[6.608e-18 0.1079],GaussNewton,[0 0.1079],1.53707393781735e-17
+"Circular Gaussian",[6.608e-18 0.1079],Lookup,[0 0.1101],0.00215836058035576
+"Circular Gaussian",[-0.07631 0.07631],Direct,[-0.07631 0.07631],0
+"Circular Gaussian",[-0.07631 0.07631],EKF-1step,[-0.07631 0.07631],2.9341102821653e-14
+"Circular Gaussian",[-0.07631 0.07631],GaussNewton,[-0.07631 0.07631],2.77555756156289e-17
+"Circular Gaussian",[-0.07631 0.07631],Lookup,[-0.0777 0.0777],0.0019677519705129
+"Elliptical Gaussian",[0 0],Direct,[0 0],0
+"Elliptical Gaussian",[0 0],EKF-1step,[0 0],0
+"Elliptical Gaussian",[0 0],GaussNewton,[0 0],0
+"Elliptical Gaussian",[0 0],Lookup,[0 0],0
+"Elliptical Gaussian",[0.02158 0],Direct,[0.02158 0],1.04083408558608e-17
+"Elliptical Gaussian",[0.02158 0],EKF-1step,[0.02158 0],5.88071258356138e-15
+"Elliptical Gaussian",[0.02158 0],GaussNewton,[0.02158 0],3.46944695195361e-18
+"Elliptical Gaussian",[0.02158 0],Lookup,[0.01943 0],0.00215836058035577
+"Elliptical Gaussian",[0.01526 0.01526],Direct,[0.01526 0.01526],1.73472347597681e-18
+"Elliptical Gaussian",[0.01526 0.01526],EKF-1step,[0.01526 0.01526],5.50095283747377e-15
+"Elliptical Gaussian",[0.01526 0.01526],GaussNewton,[0.01526 0.01526],7.35980840008019e-18
+"Elliptical Gaussian",[0.01526 0.01526],Lookup,[0.01295 0.01554],0.00232843972095442
+"Elliptical Gaussian",[1.322e-18 0.02158],Direct,[0 0.02158],7.0636332006554e-18
+"Elliptical Gaussian",[1.322e-18 0.02158],EKF-1step,[0 0.02158],5.10355663744614e-15
+"Elliptical Gaussian",[1.322e-18 0.02158],GaussNewton,[0 0.02158],3.71264427815817e-18
+"Elliptical Gaussian",[1.322e-18 0.02158],Lookup,[0 0.02331],0.00172668846428461
+"Elliptical Gaussian",[-0.01526 0.01526],Direct,[-0.01526 0.01526],3.46944695195361e-18
+"Elliptical Gaussian",[-0.01526 0.01526],EKF-1step,[-0.01526 0.01526],5.4988446713718e-15
+"Elliptical Gaussian",[-0.01526 0.01526],GaussNewton,[-0.01526 0.01526],1.81110447974006e-17
+"Elliptical Gaussian",[-0.01526 0.01526],Lookup,[-0.01295 0.01554],0.00232843972095442
+"Elliptical Gaussian",[0.06475 0],Direct,[0.06475 0],1.38777878078145e-17
+"Elliptical Gaussian",[0.06475 0],EKF-1step,[0.06475 0],1.76247905159244e-14
+"Elliptical Gaussian",[0.06475 0],GaussNewton,[0.06475 0],2.77555756156289e-17
+"Elliptical Gaussian",[0.06475 0],Lookup,[0.06475 0],0
+"Elliptical Gaussian",[0.04579 0.04579],Direct,[0.04579 0.04579],6.93889390390723e-18
+"Elliptical Gaussian",[0.04579 0.04579],EKF-1step,[0.04579 0.04579],1.65147599132864e-14
+"Elliptical Gaussian",[0.04579 0.04579],GaussNewton,[0.04579 0.04579],2.5018537765542e-17
+"Elliptical Gaussian",[0.04579 0.04579],Lookup,[0.04533 0.04662],0.000953270651868609
+"Elliptical Gaussian",[3.965e-18 0.06475],Direct,[0 0.06475],1.44330517525646e-17
+"Elliptical Gaussian",[3.965e-18 0.06475],EKF-1step,[0 0.06475],1.53488338275334e-14
+"Elliptical Gaussian",[3.965e-18 0.06475],GaussNewton,[0 0.06475],1.44330517525646e-17
+"Elliptical Gaussian",[3.965e-18 0.06475],Lookup,[0 0.06605],0.00129501634821345
+"Elliptical Gaussian",[-0.04579 0.04579],Direct,[-0.04579 0.04579],1.55158384577955e-17
+"Elliptical Gaussian",[-0.04579 0.04579],EKF-1step,[-0.04579 0.04579],1.65206670520626e-14
+"Elliptical Gaussian",[-0.04579 0.04579],GaussNewton,[-0.04579 0.04579],1.38777878078145e-17
+"Elliptical Gaussian",[-0.04579 0.04579],Lookup,[-0.04533 0.04662],0.000953270651868599
+"Elliptical Gaussian",[0.1079 0],Direct,[0.1079 0],0
+"Elliptical Gaussian",[0.1079 0],EKF-1step,[0.1079 0],2.93376434257198e-14
+"Elliptical Gaussian",[0.1079 0],GaussNewton,[0.1079 0],1.38777878078145e-17
+"Elliptical Gaussian",[0.1079 0],Lookup,[0.1101 0],0.00215836058035576
+"Elliptical Gaussian",[0.07631 0.07631],Direct,[0.07631 0.07631],1.38777878078145e-17
+"Elliptical Gaussian",[0.07631 0.07631],EKF-1step,[0.07631 0.07631],2.75229107760476e-14
+"Elliptical Gaussian",[0.07631 0.07631],GaussNewton,[0.07631 0.07631],3.10316769155909e-17
+"Elliptical Gaussian",[0.07631 0.07631],Lookup,[0.0777 0.0777],0.0019677519705129
+"Elliptical Gaussian",[6.608e-18 0.1079],Direct,[0 0.1079],4.21545203334295e-17
+"Elliptical Gaussian",[6.608e-18 0.1079],EKF-1step,[0 0.1079],2.55906415707857e-14
+"Elliptical Gaussian",[6.608e-18 0.1079],GaussNewton,[0 0.1079],4.21545203334295e-17
+"Elliptical Gaussian",[6.608e-18 0.1079],Lookup,[0 0.1088],0.000863344232142293
+"Elliptical Gaussian",[-0.07631 0.07631],Direct,[-0.07631 0.07631],1.38777878078145e-17
+"Elliptical Gaussian",[-0.07631 0.07631],EKF-1step,[-0.07631 0.07631],2.75138019550507e-14
+"Elliptical Gaussian",[-0.07631 0.07631],GaussNewton,[-0.07631 0.07631],1.96261557335472e-17
+"Elliptical Gaussian",[-0.07631 0.07631],Lookup,[-0.0777 0.0777],0.0019677519705129
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0 0],Direct,[0 0],0
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0 0],EKF-1step,[0 0],0
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0 0],GaussNewton,[0 0],0
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0 0],Lookup,[0 0],0
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.02158 0],Direct,[0.02158 4.957e-18],8.52744756634431e-18
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.02158 0],EKF-1step,[0.02158 5.057e-15],5.46197324027232e-15
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.02158 0],GaussNewton,[0.02158 4.991e-18],4.9911723766256e-18
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.02158 0],Lookup,[0.02155 0],3.32311294910966e-05
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.01526 0.01526],Direct,[0.01526 0.01526],2.94902990916057e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.01526 0.01526],EKF-1step,[0.01526 0.01526],5.07717763334493e-15
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.01526 0.01526],GaussNewton,[0.01526 0.01526],2.25514051876985e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.01526 0.01526],Lookup,[0.01616 0.01696],0.00191849464433932
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[1.322e-18 0.02158],Direct,[1.662e-17 0.02158],1.84992915619881e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[1.322e-18 0.02158],EKF-1step,[3.308e-15 0.02158],3.32186523349578e-15
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[1.322e-18 0.02158],GaussNewton,[-5.213e-18 0.02158],1.22894310590888e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[1.322e-18 0.02158],Lookup,[0 0.02119],0.000388925653938135
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.01526 0.01526],Direct,[-0.01526 0.01526],3.87895961444886e-18
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.01526 0.01526],EKF-1step,[-0.01526 0.01526],3.90018307711419e-15
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.01526 0.01526],GaussNewton,[-0.01526 0.01526],2.4532694666934e-18
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.01526 0.01526],Lookup,[-0.01616 0.01272],0.00269983805847144
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.06475 0],Direct,[0.06475 0],1.38777878078145e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.06475 0],EKF-1step,[0.06475 1.516e-14],1.63692718217273e-14
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.06475 0],GaussNewton,[0.06475 -1.385e-17],3.10186257918026e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.06475 0],Lookup,[0.06465 0],9.96933884732792e-05
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.04579 0.04579],Direct,[0.04579 0.04579],2.77555756156289e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.04579 0.04579],EKF-1step,[0.04579 0.04579],1.51668809009574e-14
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.04579 0.04579],GaussNewton,[0.04579 0.04579],2.5018537765542e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.04579 0.04579],Lookup,[0.04849 0.04663],0.00283089199661347
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[3.965e-18 0.06475],Direct,[2.077e-17 0.06475],1.6804011970903e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[3.965e-18 0.06475],EKF-1step,[9.886e-15 0.06475],9.93101179888948e-15
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[3.965e-18 0.06475],GaussNewton,[5.31e-18 0.06475],1.34475839100835e-18
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[3.965e-18 0.06475],Lookup,[0 0.06358],0.00116677696181439
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.04579 0.04579],Direct,[-0.04579 0.04579],2.19427091786044e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.04579 0.04579],EKF-1step,[-0.04579 0.04579],1.16999916298986e-14
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.04579 0.04579],GaussNewton,[-0.04579 0.04579],6.93889390390723e-18
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.04579 0.04579],Lookup,[-0.0431 0.04663],0.002814086641751
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.1079 0],Direct,[0.1079 -1.586e-17],5.77327951177074e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.1079 0],EKF-1step,[0.1079 2.524e-14],2.7247360163682e-14
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.1079 0],GaussNewton,[0.1079 -3.96e-17],7.98923604942564e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.1079 0],Lookup,[0.1078 0],0.000166155647455465
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.07631 0.07631],Direct,[0.07631 0.07631],7.47341745035227e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.07631 0.07631],EKF-1step,[0.07631 0.07631],2.53192508481146e-14
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.07631 0.07631],GaussNewton,[0.07631 0.07631],1.96261557335472e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[0.07631 0.07631],Lookup,[0.07543 0.0763],0.000883301830439129
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[6.608e-18 0.1079],Direct,[8.308e-18 0.1079],4.16680350477566e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[6.608e-18 0.1079],EKF-1step,[1.647e-14 0.1079],1.6542976687149e-14
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[6.608e-18 0.1079],GaussNewton,[-2.546e-17 0.1079],4.24139471432574e-17
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[6.608e-18 0.1079],Lookup,[0 0.106],0.00194462826969065
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.07631 0.07631],Direct,[-0.07631 0.07631],1.49468349007045e-16
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.07631 0.07631],EKF-1step,[-0.07631 0.07631],1.94798123206488e-14
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.07631 0.07631],GaussNewton,[-0.07631 0.07631],1.14439169963056e-16
+"Rotated Elliptical Gaussian (\phi=30^\circ)",[-0.07631 0.07631],Lookup,[-0.07543 0.0763],0.000883301830439115
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0 0],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0 0],EKF-1step,[0 0],0
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0 0],GaussNewton,[0 0],0
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0 0],Lookup,[0 0],0
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.02158 0],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.02158 0],EKF-1step,[0.02505 -2.011e-14],0.00346403147933103
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.02158 0],GaussNewton,[0.02158 -1.745e-17],1.87794870680358e-17
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.02158 0],Lookup,[0.02155 0],3.32311294910966e-05
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.01526 0.01526],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.01526 0.01526],EKF-1step,[0.01716 0.01716],0.00268376887240232
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.01526 0.01526],GaussNewton,[0.01526 0.01526],1.57354098181725e-13
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.01526 0.01526],Lookup,[0.01616 0.01696],0.00191849464433932
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[1.322e-18 0.02158],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[1.322e-18 0.02158],EKF-1step,[4.907e-15 0.02718],0.00559574260627161
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[1.322e-18 0.02158],GaussNewton,[-5.504e-18 0.02158],1.77073409214448e-16
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[1.322e-18 0.02158],Lookup,[0 0.02119],0.000388925653938135
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.01526 0.01526],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.01526 0.01526],EKF-1step,[-0.01977 0.01977],0.00637600531847122
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.01526 0.01526],GaussNewton,[-0.01526 0.01526],8.56447579471173e-16
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.01526 0.01526],Lookup,[-0.01616 0.01272],0.00269983805847144
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.06475 0],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.06475 0],EKF-1step,[0.1583 -1.271e-13],0.0935289330790703
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.06475 0],GaussNewton,[0.06475 -9.055e-17],1.23016880959641e-16
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.06475 0],Lookup,[0.06465 0],9.96933884732792e-05
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.04579 0.04579],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.04579 0.04579],EKF-1step,[0.09702 0.09702],0.0724618682726087
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.04579 0.04579],GaussNewton,[0.04579 0.04579],6.3832261999344e-14
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.04579 0.04579],Lookup,[0.04849 0.04663],0.00283089199661347
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[3.965e-18 0.06475],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[3.965e-18 0.06475],EKF-1step,[3.902e-14 0.2158],0.151085184667383
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[3.965e-18 0.06475],GaussNewton,[-7.643e-15 0.06475],8.37436012654079e-15
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[3.965e-18 0.06475],Lookup,[0 0.06358],0.00116677696181439
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.04579 0.04579],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.04579 0.04579],EKF-1step,[-0.1675 0.1675],0.172152252316149
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.04579 0.04579],GaussNewton,[-0.04579 0.04579],1.73913101322555e-15
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.04579 0.04579],Lookup,[-0.0431 0.04663],0.002814086641751
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.1079 0],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.1079 0],EKF-1step,[0.5409 -4.347e-13],0.433004350602041
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.1079 0],GaussNewton,[0.1079 -8.525e-17],1.2924490978221e-16
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.1079 0],Lookup,[0.1078 0],0.000166155647455465
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.07631 0.07631],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.07631 0.07631],EKF-1step,[0.3135 0.3135],0.335471652639023
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.07631 0.07631],GaussNewton,[0.07631 0.07631],1.38840314078339e-15
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[0.07631 0.07631],Lookup,[0.07543 0.0763],0.000883301830439129
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[6.608e-18 0.1079],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[6.608e-18 0.1079],EKF-1step,[1.457e-13 0.8074],0.699468497274198
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[6.608e-18 0.1079],GaussNewton,[-9.411e-16 0.1079],1.04078543959223e-15
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[6.608e-18 0.1079],Lookup,[0.005388 0.1102],0.00585576755308022
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.07631 0.07631],Direct,[NaN NaN],NaN
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.07631 0.07631],EKF-1step,[-0.6399 0.6399],0.797001208396035
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.07631 0.07631],GaussNewton,[-0.07631 0.07631],4.42786255814948e-16
+"Flat-top Super-Gaussian (p=4, \phi=30^\circ)",[-0.07631 0.07631],Lookup,[-0.07543 0.0763],0.000883301830439115
+"Sidelobed (sinc^2, \phi=30^\circ)",[0 0],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[0 0],EKF-1step,[0 0],0
+"Sidelobed (sinc^2, \phi=30^\circ)",[0 0],GaussNewton,[0 0],0
+"Sidelobed (sinc^2, \phi=30^\circ)",[0 0],Lookup,[0 0],0
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.02158 0],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.02158 0],EKF-1step,[0.02169 -3.886e-07],0.00010990033295728
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.02158 0],GaussNewton,[0.02158 -2.658e-18],7.63740884406067e-17
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.02158 0],Lookup,[0.01994 0],0.00164654899347798
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.01526 0.01526],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.01526 0.01526],EKF-1step,[0.01538 0.01534],0.000136610349946623
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.01526 0.01526],GaussNewton,[0.01526 0.01526],3.68729746938221e-16
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.01526 0.01526],Lookup,[0.01595 0.01512],0.00070144048668283
+"Sidelobed (sinc^2, \phi=30^\circ)",[1.322e-18 0.02158],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[1.322e-18 0.02158],EKF-1step,[-0.000114 0.02185],0.000289495532095745
+"Sidelobed (sinc^2, \phi=30^\circ)",[1.322e-18 0.02158],GaussNewton,[-5.154e-17 0.02158],6.13933222782464e-17
+"Sidelobed (sinc^2, \phi=30^\circ)",[1.322e-18 0.02158],Lookup,[0 0.02117],0.000410127423258824
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.01526 0.01526],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.01526 0.01526],EKF-1step,[-0.01545 0.01562],0.000401799721650885
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.01526 0.01526],GaussNewton,[-0.01526 0.01526],3.5762240613455e-17
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.01526 0.01526],Lookup,[-0.01595 0.01512],0.000701440486682832
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.06475 0],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.06475 0],EKF-1step,[0.06791 -1.556e-05],0.0031565092615286
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.06475 0],GaussNewton,[0.06475 2.522e-17],2.87897019869425e-17
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.06475 0],Lookup,[0.0638 0],0.000952235618417979
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.04579 0.04579],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.04579 0.04579],EKF-1step,[0.04916 0.04793],0.00399582307437961
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.04579 0.04579],GaussNewton,[0.04579 0.04579],2.87273559724861e-16
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.04579 0.04579],Lookup,[0.04386 0.04537],0.00196825040650301
+"Sidelobed (sinc^2, \phi=30^\circ)",[3.965e-18 0.06475],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[3.965e-18 0.06475],EKF-1step,[-0.003726 0.07365],0.00964446599943901
+"Sidelobed (sinc^2, \phi=30^\circ)",[3.965e-18 0.06475],GaussNewton,[2.618e-17 0.06475],1.13222473466318e-16
+"Sidelobed (sinc^2, \phi=30^\circ)",[3.965e-18 0.06475],Lookup,[0 0.06352],0.00123038226977645
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.04579 0.04579],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.04579 0.04579],EKF-1step,[-0.05195 0.05864],0.0142582513387455
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.04579 0.04579],GaussNewton,[-0.04579 0.04579],2.5018537765542e-17
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.04579 0.04579],Lookup,[-0.04785 0.04537],0.0021043214600485
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.1079 0],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.1079 0],EKF-1step,[0.1247 -0.0001514],0.0167874183241323
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.1079 0],GaussNewton,[0.1079 -2.257e-17],4.73573124835348e-17
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.1079 0],Lookup,[0.1077 0],0.000257922243357994
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.07631 0.07631],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.07631 0.07631],EKF-1step,[0.09525 0.08808],0.0223005685229451
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.07631 0.07631],GaussNewton,[0.07631 0.07631],3.13894730569614e-14
+"Sidelobed (sinc^2, \phi=30^\circ)",[0.07631 0.07631],Lookup,[0.07576 0.07562],0.000881610697221135
+"Sidelobed (sinc^2, \phi=30^\circ)",[6.608e-18 0.1079],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[6.608e-18 0.1079],EKF-1step,[-0.02586 0.2003],0.0959642375928475
+"Sidelobed (sinc^2, \phi=30^\circ)",[6.608e-18 0.1079],GaussNewton,[0.06916 0.1717],0.0940770609815832
+"Sidelobed (sinc^2, \phi=30^\circ)",[6.608e-18 0.1079],Lookup,[-0.02791 0.09074],0.032772521954337
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.07631 0.07631],Direct,[NaN NaN],NaN
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.07631 0.07631],EKF-1step,[-0.09672 0.3772],0.30157846762111
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.07631 0.07631],GaussNewton,[0.1496 0.5111],0.489977966581464
+"Sidelobed (sinc^2, \phi=30^\circ)",[-0.07631 0.07631],Lookup,[-0.1156 0.05142],0.0465393344241561
